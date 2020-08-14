@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Default route
 app.get("/", (req,res) => {
-	res.send("hi")
+	res.send("hi");
 });
 
 const port = 8000;
