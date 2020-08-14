@@ -2,14 +2,15 @@ const express = require("express");                        // this is #include->
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = 8000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Default route
 app.get("/", (req,res) => {
-	console.log("hi");
 	res.send("hi")
-});               // "/" is route
+});
+
+const port = 8000;
 
 app.listen(port, () => {
 	console.log("Listening on port " + port);
