@@ -7,11 +7,13 @@ const app = express();
 
 // Routes
 const createEntry = require('./routes/createEntry');
+const getEntry = require('./routes/getEntries')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(createEntry);
+app.use(getEntry);
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
 	res.send("hi");
 });
 
