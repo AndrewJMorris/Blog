@@ -1,15 +1,16 @@
 const express = require("express");                        // this is #include-> weird
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const db = require("./keys");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
+// Routes
+const createEntry = require('./routes/createEntry')
 
-// Default route
-app.get("/", (req,res) => {
-	res.send("hi");
-});
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(createEntry)
+
 
 const port = 8000;
 
