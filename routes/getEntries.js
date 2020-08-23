@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const post = require('../models/Post');
+const Post = require('../models/Post');
 
 router.get('/getEntry', (req, res) => {
-    res.json('i');
+	Post.find({})
+		.then((post) => res.status(200).json(post))
+		.catch((err) => console.log(err));
 });
 
 module.exports = router;

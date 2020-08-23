@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const post = require('../models/Post');
+const Post = require('../models/Post');
 
 router.post('/createEntry', (req, res) => {
 	const title = req.body.title;
 	const content = req.body.content;
 
-	const p = new post ({
+	const p = new Post ({
 		title: title,
 		content: content
 	});
