@@ -1,9 +1,11 @@
 const express = require("express");                        // this is #include-> weird
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const ejs = require("ejs");
 const db = require("./keys");
 
 const app = express();
+app.set('view engine', 'ejs');
 
 // Routes
 const createEntry = require('./routes/createEntry');
