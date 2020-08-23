@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const post = require('./models/Post');
+const post = require('../models/Post');
 
-router.get('/createEntry', (req, res) => {
+router.post('/createEntry', (req, res) => {
 	const title = req.body.title;
 	const content = req.body.content;
 
