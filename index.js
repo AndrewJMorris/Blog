@@ -14,7 +14,7 @@ app.use(createEntry);
 app.use(getEntry);
 
 app.use("/", (req, res) => {
-	res.send("hi");
+	res.send("andrew is a WeirdChamp");
 });
 
 mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
