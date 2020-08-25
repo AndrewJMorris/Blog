@@ -18,6 +18,8 @@ app.use(getEntry);
 app.get("/EJS", (req, res) => {
 	let people = ['geddy', 'neil', 'alex'];
 	let html = ejs.render('<%= people.join(", "); %>', {people: people});
+
+	res.send(html);
 })
 
 app.get("/Nidiyan*", (req, res) => { 
