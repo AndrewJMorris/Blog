@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "node index.js",
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+    "testing": "testing one two one two"
   },
   "author": "",
   "license": "ISC",
