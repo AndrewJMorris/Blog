@@ -15,11 +15,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(createEntry);
 app.use(getEntry);
 
-app.get("/:Nidiyan", (req, res) => { 
+app.get("/Nidiyan*", (req, res) => { 
 	res.send("Nidiyan is a WeirdChamp");
 });
 
-app.get("/:Andrew", (req, res) => { 
+app.get("/Andrew*", (req, res) => { 
 	res.send("Andrew is a WeirdChamp");
 });
 
