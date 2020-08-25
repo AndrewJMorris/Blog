@@ -5,13 +5,15 @@ const ejs = require("ejs");
 const db = require("./keys");
 
 const app = express();
-app.set('view engine', 'ejs');
 
 // Routes
 const createEntry = require('./routes/createEntry');
 const getEntry = require('./routes/getEntries');
 
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(createEntry);
 app.use(getEntry);
 
