@@ -22,21 +22,16 @@ app.get("/EJS", (req, res) => {
 	res.send(html);
 })
 
+app.get("/", (req, res) => { 
+	res.sendFile(__dirname + "/index.html");
+});
+
 app.get("/Nidiyan*", (req, res) => { 
 	res.send("Nidiyan is a WeirdChamp");
 });
 
 app.get("/Andrew*", (req, res) => { 
 	res.send("Andrew is a WeirdChamp");
-});
-
-app.get("/", (req, res) => { 
-	res.sendFile(__dirname + "/index.html");
-});
-
-app.get('/cock', (req, res) => {
-	res.write("According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.");
-	res.send();
 });
 
 mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
