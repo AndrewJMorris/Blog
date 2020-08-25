@@ -15,6 +15,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(createEntry);
 app.use(getEntry);
 
+app.get("/EJS", (req, res) => {
+	let people = ['geddy', 'neil', 'alex'];
+	let html = ejs.render('<%= people.join(", "); %>', {people: people});
+})
+
 app.get("/Nidiyan*", (req, res) => { 
 	res.send("Nidiyan is a WeirdChamp");
 });
