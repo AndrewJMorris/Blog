@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/index.html");
 });
 
-app.get('/cock',(req, res) => {
+app.get('/cock', (req, res) => {
 	res.write("According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.");
 	res.send();
 });
