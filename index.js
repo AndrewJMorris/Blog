@@ -11,6 +11,7 @@ const app = express();
 const createEntry = require('./routes/createEntry');
 const getEntry = require('./routes/getEntries');
 
+// Middleware
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,14 +19,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(createEntry);
 app.use(getEntry);
 
-app.get("/", (req, res) => {
-	const p = Post.find({})
+// Base route
+app.get("/", async (req, res) => {
+	let p = await Post.find({})
 		.then((post) => {return(post);})
 		.catch((err) => console.log(err)); 
 
-	console.log(p);
-
-	res.render("index", {});
+	res.render("index", {posts: p})
 });
 
 app.get("/About", (req, res) => {
@@ -44,6 +44,7 @@ app.get("/Andrew*", (req, res) => {
 	res.send("Andrew is a WeirdChamp");
 });
 
+// Connect to db
 mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
 		.then(() => console.log("Connected to MongoDB"))
 		.catch((err) => console.log(err));

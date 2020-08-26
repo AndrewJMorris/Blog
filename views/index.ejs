@@ -1,5 +1,8 @@
 <%- include("partials/header.ejs") %>
 
-
+<% posts.forEach((post) => { %>
+	<h3><%- post.title; %></h3>
+	<p><%- post.content; %></p>
+<% }); %> 
 
 <%- include("partials/footer.ejs") %>
