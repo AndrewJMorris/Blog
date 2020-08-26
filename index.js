@@ -17,20 +17,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(createEntry);
 app.use(getEntry);
 
-app.get("/EJS", (req, res) => {
-	let people = ['geddy', 'neil', 'alex'];
-	let html = ejs.render('<%= people.join(", "); %>', {people: people});
-
-	res.send(html);
-})
-
 app.get("/", (req, res) => { 
-	res.sendFile(__dirname + "/index.html");
+	res.render("index", {});
 });
 
 app.get("/About", (req, res) => {
-	res.sendFile(__dirname + "/about.html");
-
+	res.render("about", {});
 });
 
 app.get("/Nidiyan*", (req, res) => { 
