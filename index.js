@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
+const Post = require("./models/Post");
 const db = require("./keys");
 
 const app = express();
@@ -17,7 +18,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(createEntry);
 app.use(getEntry);
 
-app.get("/", (req, res) => { 
+app.get("/", (req, res) => {
+	const p = Post.find({})
+		.then((post) => {return(post);})
+		.catch((err) => console.log(err)); 
+
+	console.log(p);
+
 	res.render("index", {});
 });
 
