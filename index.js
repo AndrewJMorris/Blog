@@ -25,6 +25,10 @@ app.get("/About", (req, res) => {
 	res.render("about", {});
 });
 
+app.get("/CreateEntry", (req, res) => {
+	res.render("createEntry", {});
+});
+
 app.get("/Nidiyan*", (req, res) => { 
 	res.send("Nidiyan is a WeirdChamp");
 });
