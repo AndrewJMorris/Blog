@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/About", (req, res) => {
-	res.write('<h1> Welcome to our blog! Written by Andrew Morris, Bobby Pappas, and Nidiyan Rajendran</h1> <br> <a href="https://github.com/AndrewJMorris/Blog">link to check out the github :)</a>');
+	res.sendFile(__dirname + "/about.html");
 
 });
 
