@@ -13,7 +13,7 @@ router.post('/createEntry', (req, res) => {
 
 	p.save();
 
-	res.status(200).json(p);
+	res.status(200).redirect("/");
 });
 
 module.exports = router;

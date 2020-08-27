@@ -1,8 +1,17 @@
 <%- include("partials/header.ejs") %>
 
-<% posts.forEach((post) => { %>
-	<h3><%- post.title; %></h3>
-	<p><%- post.content; %></p>
-<% }); %> 
+<div class="centerFlex">
+	<div class="d-inline-flex p-2 flexFormat">
+		<% posts.forEach((post) => { %>
+			<div class="card cardMargin" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title"><%- post.title %></h5>
+					<p class="card-text"><%- post.content; %></p>
+					<a href="#" class="card-link">Read More</a>
+				</div>
+			</div>
+		<% }); %> 
+	</div>
+</div>
 
 <%- include("partials/footer.ejs") %>

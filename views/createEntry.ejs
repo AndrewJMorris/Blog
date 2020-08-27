@@ -1,10 +1,13 @@
 <%- include("partials/header.ejs") %>
 
-<form class="center">
+<form class="center" action="/createEntry" method="POST">
 	<div class="form-group">
 		<div class="form-group">
 			<label for="title">Title: </label>
-			<input type="text" class="form-control titleField center" id="title">
+			<input type="text" class="form-control titleField center" id="title" name="title">
+			<label for="content">Content: </label>
+			<textarea class="form-control content" id="content" rows="10" name="content"></textarea>
+			<button type="submit" class="btn btn-primary mb-2 publish">Publish!</button>
 		</div>
 	</div>
 </form>
