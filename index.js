@@ -52,7 +52,7 @@ mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
 		.then(() => console.log("Connected to MongoDB"))
 		.catch((err) => console.log(err));
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
 	console.log("Listening on port " + port);
