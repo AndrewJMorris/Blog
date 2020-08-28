@@ -6,8 +6,12 @@
 			<div class="card cardMargin" style="width: 18rem;">
 				<div class="card-body">
 					<h5 class="card-title"><%- post.title %></h5>
-					<p class="card-text"><%- post.content; %></p>
-					<a href="#" class="card-link">Read More</a>
+					<% if (post.content.length > 100) { %>
+						<p class="card-text"><%- post.content.slice(0, 100) + "..." %></p>
+					<% } else { %>
+						<p class="card-text"><%- post.content %> </p>
+					<% } %> 
+					<a href="/post/<%- post._id %> "  class="card-link">Read More</a>
 				</div>
 			</div>
 		<% }); %> 

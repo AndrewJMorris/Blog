@@ -1,7 +1,50 @@
 <%- include("partials/header.ejs") %>
 
-<h1> Welcome to our blog! Written by Andrew Morris, Bobby Pappas, and Nidiyan Rajendran</h1>
-	<br>
-	<a href="https://github.com/AndrewJMorris/Blog">link to check out the github :)</a>
+<div class="center">
+	<h1> Welcome to our blog!</h1>
+	<h3>Created by </h3>
+
+	<div class="centerFlex d-flex flex-column">
+		<div class="centerFlex aboutFlex flexFormat d-flex flex-row">
+			<div class="m-2"><span class="vertical-center person">Nidiyan Rajendran</span></div>
+			<div class="m-2">
+				<a href="https://github.com/Nidiyan/" target="_blank">
+					<img class="socialIcons" src="https://image.flaticon.com/icons/svg/733/733609.svg" alt="Nidiyan Github link" />
+				</a>
+				<a href="https://www.linkedin.com/in/nidiyan-rajendran/" target="_blank">
+					<img class="socialIcons" src="https://image.flaticon.com/icons/svg/1384/1384014.svg" alt="Nidiyan Linkedin" />
+				</a>
+			</div>
+		</div>
+
+		<div class="centerFlex aboutFlex flexFormat d-flex flex-row">
+			<div class="m-2"><span class="vertical-center person">Bobby Pappas</span></div>
+			<div class="m-2">
+				<a href="https://github.com/bobbypappas/" target="_blank">
+					<img class="socialIcons" src="https://image.flaticon.com/icons/svg/733/733609.svg" alt="Bobby Github link" />
+				</a>
+				<a href="https://www.linkedin.com/in/bobby-pappas-35b324198/" target="_blank">
+					<img class="socialIcons" src="https://image.flaticon.com/icons/svg/1384/1384014.svg" alt="Bobby Linkedin" />
+				</a>
+			</div>
+		</div>
+
+		<div class="centerFlex aboutFlex flexFormat d-flex flex-row">
+			<div class="m-2"><span class="vertical-center person">Andrew Morris</span></div>
+			<div class="m-2">
+				<a href="https://github.com/AndrewJMorris/" target="_blank">
+					<img class="socialIcons" src="https://image.flaticon.com/icons/svg/733/733609.svg" alt="Andrew Github link" />
+				</a>
+				<a href="" target="_blank">
+					<img class="socialIcons" src="https://image.flaticon.com/icons/svg/1384/1384014.svg" alt="Andrew Linkedin" />
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<p>Developed using Nodejs, Express, MongoDB, and HTML/CSS.</p>
+	<p>This can be extended to React.js and made into an official MERN stack application.</p>
+	<a href="https://github.com/AndrewJMorris/Blog">Link to check out the github repo :)</a>
+</div>
 
 <%- include("partials/footer.ejs") %>
